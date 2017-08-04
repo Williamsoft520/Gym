@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Security;
+using System.Net;
+
 namespace Gym.Sample
 {
     class Program
@@ -79,6 +81,24 @@ namespace Gym.Sample
             Console.WriteLine("administrator".CryptoForMD5());
             Console.WriteLine("admin".CryptoForSHA1());
             Console.WriteLine("admin".CryptoForSHA256());
+            #endregion
+
+            #region Http
+            Console.WriteLine(
+            WebRequest.CreateHttp("http://www.baidu.com").GetResponseAsync().GetAwaiter().GetResult()
+                .ToHttpResponse().GetResponseString()
+            );
+
+            Console.WriteLine( WebRequest.Create("http://10.106.29.251:9999/api/sts/token")
+                .SetMethod("post")
+                .SetContentType(HttpExtension.FORM_URL_ENCODED)
+                .PushDataAsync(new
+                {
+                    Account = "admin",
+                    Password = "123456",
+                    AppCode = "SmartOffice"
+                }).GetAwaiter().GetResult().GetResponseString()
+                );
             #endregion
         }
     }
