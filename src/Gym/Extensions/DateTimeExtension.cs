@@ -114,17 +114,6 @@ namespace System
             var calendar = new GregorianCalendar(type);
             return calendar.GetDaysInYear(datetime.Year, calendar.GetEra(datetime));
         }
-
-        ///// <summary>
-        ///// 返回当前日期实例中的日期是该年中的第几天。
-        ///// </summary>
-        ///// <param name="datetime">当前时间的扩展实例。</param>
-        ///// <param name="type">指示要创建的日历的语言版本。</param>
-        ///// <returns>从 1 到 366 的整数，表示 time 中的日期是该年中的第几天。</returns>
-        //public static int GetDayOfYear(this DateTime datetime, GregorianCalendarTypes type = GregorianCalendarTypes.Localized)
-        //{
-        //    var calendar = new GregorianCalendar(type);
-        //    return calendar.GetDayOfYear(datetime);
-        //}
+        
     }
 }

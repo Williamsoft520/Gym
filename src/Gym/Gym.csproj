@@ -4,18 +4,18 @@
     <TargetFramework>netstandard1.3</TargetFramework>
     <AssemblyName>Williamsoft.Gym</AssemblyName>
     <RootNamespace>System</RootNamespace>
-    <Version>3.0.1</Version>
+    <Version>3.1</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>周大侠</Authors>
     <Company>Williamsoft</Company>
     <Product>Williamsoft.Gym</Product>
-    <Description>easy use,easy stronger</Description>
+    <Description>easy use,easy stronger. Only extend instance</Description>
     <Copyright>Williamsoft © 周大侠 2017</Copyright>
     <PackageTags>extension wrapper library</PackageTags>
     <PackageId>Gym</PackageId>
-    <AssemblyVersion>3.0.1</AssemblyVersion>
-    <FileVersion>3.0.1642.3251</FileVersion>
+    <AssemblyVersion>3.1.0</AssemblyVersion>
+    <FileVersion>3.0.9124.35510</FileVersion>
     <PrimaryVersionType>AssemblyVersionAttribute</PrimaryVersionType>
     <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
     <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
@@ -23,11 +23,13 @@
     <AssemblyVersionSettings>None.None.None.None</AssemblyVersionSettings>
     <AssemblyFileVersionSettings>None.None.TimeStamp.DeltaDayStamp</AssemblyFileVersionSettings>
     <AssemblyInfoVersionSettings>None.None.None.Increment</AssemblyInfoVersionSettings>
-    <RepositoryUrl></RepositoryUrl>
+    <RepositoryUrl>https://github.com/Williamsoft520/Gym</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
-    <PackageReleaseNotes>transfer project from Framework4.5 to .Net Standard 1.3
-[new] Add HttpExtension, user can push http client easily</PackageReleaseNotes>
-    <PackageProjectUrl></PackageProjectUrl>
+    <PackageReleaseNotes>transfer project from Framework4.5 to .Net Standard 1.1
+[remove] Http Extension, it must has a dependency of System.Http.Requests.
+[fix] bugs</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/Williamsoft520/Gym</PackageProjectUrl>
+    <PackageIconUrl>http://www.easyicon.net/api/resizeApi.php?id=1177215&amp;size=48</PackageIconUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -40,9 +42,5 @@
     <DebugType>none</DebugType>
     <DebugSymbols>False</DebugSymbols>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="System.Net.Requests" Version="4.3.0" />
-  </ItemGroup>
 
 </Project>
