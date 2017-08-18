@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Williamsoft.Gym</AssemblyName>
     <RootNamespace>System</RootNamespace>
-    <Version>3.1</Version>
+    <Version>3.5</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>周大侠</Authors>
@@ -14,8 +14,8 @@
     <Copyright>Williamsoft © 周大侠 2017</Copyright>
     <PackageTags>extension wrapper library</PackageTags>
     <PackageId>Gym</PackageId>
-    <AssemblyVersion>3.1.0</AssemblyVersion>
-    <FileVersion>3.0.9124.35510</FileVersion>
+    <AssemblyVersion>3.5.0</AssemblyVersion>
+    <FileVersion>3.5.147.39105</FileVersion>
     <PrimaryVersionType>AssemblyVersionAttribute</PrimaryVersionType>
     <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
     <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
@@ -25,9 +25,8 @@
     <AssemblyInfoVersionSettings>None.None.None.Increment</AssemblyInfoVersionSettings>
     <RepositoryUrl>https://github.com/Williamsoft520/Gym</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
-    <PackageReleaseNotes>transfer project from Framework4.5 to .Net Standard 1.1
-[remove] Http Extension, it must has a dependency of System.Http.Requests.
-[fix] bugs</PackageReleaseNotes>
+    <PackageReleaseNotes>support .NET Standard 2.0, Framework 4.6.1+
+[fix]Substring extension that throw exception when length out of range</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/Williamsoft520/Gym</PackageProjectUrl>
     <PackageIconUrl>http://www.easyicon.net/api/resizeApi.php?id=1177215&amp;size=48</PackageIconUrl>
   </PropertyGroup>
@@ -42,5 +41,10 @@
     <DebugType>none</DebugType>
     <DebugSymbols>False</DebugSymbols>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Collections.Specialized" Version="4.3.0" />
+    <PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />
+  </ItemGroup>
 
 </Project>
