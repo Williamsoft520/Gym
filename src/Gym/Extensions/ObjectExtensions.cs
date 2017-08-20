@@ -37,7 +37,7 @@ namespace System
         /// <summary>
         /// 将当前对象转换成指定泛型的类型。若转换失败，将抛出异常。
         /// </summary>
-        /// <typeparam name="T">支持对 <see cref="IConvertible"/> 的实例类型。</typeparam>
+        /// <typeparam name="T">转换的实例类型。</typeparam>
         /// <param name="value">支持数据类型转换的对象。</param>
         /// <returns>成功进行数据类型转换的值。</returns>
         /// <exception cref="ArgumentNullException">value - 当前对象不能是 null 值。</exception>

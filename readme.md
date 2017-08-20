@@ -1,10 +1,11 @@
 ## Gym
-There are a lot of extensions for instance and tools the we always use in our logical code. It represents by extension methods and same namespace with System, so it is very easy to use without write any other namespaces and references.
+easy use,easy stronger. easy extend. One step install and enjoy  all. It just exntensions for developer instead of using static class or tools in so called 'Utility'. No other thirdparty dependencies or assemblies. 
+简单应用，易于扩展，一键安装，享受全部。用扩展的方式替代了曾经的静态方法或工具类，无任何第三方的额外依赖程序集。
 
-## Install Package from Nuget
+## Install Package from Nuget（使用 Nuget 安装）
 > Install-Package Gym
 
-## Examples
+## Examples（示例）
 
     var str = "sample";
     
@@ -28,28 +29,16 @@ There are a lot of extensions for instance and tools the we always use in our lo
     
     //convert a string from base64 string
     "YWRtaW5pc3RyYXRvcg==".FromBase64String();
-    
-    //to MD5
-    "administrator".CryptoForMD5();
-    
-    //to SHA256
-    "microsoft".CryptoForSHA256();
-    
+        
     //extend ForEach for IEnumerable<T>
     new[]{ 1,2,3,4,5,6,7}.ForEach(item => Console.WriteLine(item));
     
 ### For more help please see [Wiki](wiki)
+### 点击 [Wiki](wiki) 查看文档
 
-## Latest Version 3.5
-* Upgrade to .NET Standard 2.0
-* remove DescriptionAttribute becaulse .NET Standard 2.0 had been added from System.ComponentModel
-* add IPagedCollection and default instance PagedCollection
-* add Linq Extension for Paged with IPagedCollection
-* add NameValueCollection extension for GetOrDefault
-* add Serialize/Deserialize for xml string in XmlExtension
+## Latest Version v1.0（最新版本v1.0）
+>Support Framework4.5+, Core1.0+, Standard 1.0+
 
-## Platform Support
-* .NET Framework 4.6.1+
-* .NET Core 2.0+
-* .NET Standard 2.0+
+>支持 Framework4.5+, Core1.0+, Standard 1.0+
+
 

@@ -1,8 +1,6 @@
 ﻿using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Xml;
-using System.Xml.Serialization;
 
 namespace System
 {
@@ -204,42 +202,7 @@ namespace System
             return encoding.Utf8IfNull().GetString(bytes, 0, bytes.Length);
         }
         #endregion
-
-       
-
-
-        //#region v2.0
-        ///// <summary>
-        ///// 获取 app.config/web.config 的 ConnectionStrings 节点中以当前字符串作为 name 的 connectionString 属性的值。
-        ///// </summary>
-        ///// <param name="value">ConnectionStrings 节点中符合 name 的值。</param>
-        ///// <returns>符合当前字符串的 name 的 connectionString 属性的值。</returns>
-        //public static string ConnectionString(this string value)
-        //{
-        //    return ConfigurationManager.ConnectionStrings[value].ConnectionString;
-        //}
-
-        ///// <summary>
-        ///// 获取 app.config/web.config 的 AppSettings 节点中以当前字符串作为 key 的 value 属性的值。
-        ///// </summary>
-        ///// <param name="value">AppSettings 节点中符合 key 的值。</param>
-        ///// <returns>符合当前字符串的 key 的 value 属性的值。</returns>
-        //public static string AppSetting(this string value)
-        //{
-        //    return ConfigurationManager.AppSettings[value];
-        //}
-
-        ///// <summary>
-        ///// 获取 app.config/web.config 的 AppSettings 节点中以当前字符串作为 key 的 value 属性的值。
-        ///// </summary>
-        ///// <param name="value">AppSettings 节点中符合 key 的值。</param>
-        ///// <returns>符合当前字符串的 key 的 value 属性的值。</returns>
-        //public static T AppSetting<T>(this string value)
-        //{
-        //    return value.AppSetting().To<T>();
-        //}
-        //#endregion
-
+               
         #region Utf8IfNull
         /// <summary>
         /// 获取一个编码值，若编码为 null 时，将使用 UTF-8 作为默认编码。
@@ -252,7 +215,7 @@ namespace System
         #region Substring
         /// <summary>
         /// 从此实例检索子字符串。子字符串从指定的字符位置开始且具有指定的长度，并在末尾追加指定字符串。
-        /// 如果子字符串长度大于指定长度，将直接返回该字符串。
+        /// 如果子字符串长度小于指定长度，将直接返回该字符串。
         /// </summary>
         /// <param name="value">当前字符串。</param>
         /// <param name="startIndex">此实例中子字符串的起始字符位置（从零开始）。</param>
@@ -263,7 +226,7 @@ namespace System
         ///     </returns>
         public static string Substring(this string value, int startIndex, int length, string append)
         {
-            if (value.Length > length)
+            if (value.Length < length)
             {
                 return value;
             }
@@ -274,7 +237,7 @@ namespace System
 
         /// <summary>
         /// 从此实例检索子字符串。子字符串在指定的字符位置开始并一直到该字符串的末尾，并在末尾追加指定字符串。
-        /// 如果子字符串长度大于指定长度，将直接返回该字符串。
+        /// 如果子字符串长度小于指定长度，将直接返回该字符串。
         /// </summary>
         /// <param name="value">当前字符串。</param>
         /// <param name="startIndex">此实例中子字符串的起始字符位置（从零开始）。</param>

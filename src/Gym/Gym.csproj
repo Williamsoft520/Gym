@@ -1,21 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Williamsoft.Gym</AssemblyName>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <AssemblyName>Gym</AssemblyName>
     <RootNamespace>System</RootNamespace>
-    <Version>3.5</Version>
-    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Version>1.0</Version>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>周大侠</Authors>
     <Company>Williamsoft</Company>
-    <Product>Williamsoft.Gym</Product>
-    <Description>easy use,easy stronger. Only extend instance</Description>
+    <Product>Gym</Product>
+    <Description>easy use,easy stronger. easy extend. One step install and enjoy  all. It just exntensions for developer instead of using static class or tools in so called 'Utility'. No other thirdparty dependencies or assemblies. 
+简单应用，易于扩展，一键安装，享受全部。用扩展的方式替代了曾经的静态方法或工具类，无任何第三方的额外依赖程序集。</Description>
     <Copyright>Williamsoft © 周大侠 2017</Copyright>
-    <PackageTags>extension wrapper library</PackageTags>
+    <PackageTags>extension wrapper library utitlity tool helpers</PackageTags>
     <PackageId>Gym</PackageId>
-    <AssemblyVersion>3.5.0</AssemblyVersion>
-    <FileVersion>3.5.147.39105</FileVersion>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.819.64117</FileVersion>
     <PrimaryVersionType>AssemblyVersionAttribute</PrimaryVersionType>
     <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
     <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
@@ -25,26 +26,25 @@
     <AssemblyInfoVersionSettings>None.None.None.Increment</AssemblyInfoVersionSettings>
     <RepositoryUrl>https://github.com/Williamsoft520/Gym</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
-    <PackageReleaseNotes>support .NET Standard 2.0, Framework 4.6.1+
-[fix]Substring extension that throw exception when length out of range</PackageReleaseNotes>
+    <PackageReleaseNotes>Support Framework 4.5+, Core 1.0+,NETStandard 1.0+
+支持 Framework 4.5+，Core 1.0+，NETStandard 1.0+</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/Williamsoft520/Gym</PackageProjectUrl>
     <PackageIconUrl>http://www.easyicon.net/api/resizeApi.php?id=1177215&amp;size=48</PackageIconUrl>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard1.3\Williamsoft.Gym.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard1.1\Gym.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard1.3\Williamsoft.Gym.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard1.1\Gym.xml</DocumentationFile>
     <FileAlignment>1024</FileAlignment>
     <DebugType>none</DebugType>
     <DebugSymbols>False</DebugSymbols>
+    <WarningLevel>1</WarningLevel>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="System.Collections.Specialized" Version="4.3.0" />
-    <PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />
-  </ItemGroup>
 
 </Project>

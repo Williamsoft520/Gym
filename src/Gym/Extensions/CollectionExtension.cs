@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.Specialized;
 
 namespace System
 {
@@ -98,24 +97,7 @@ namespace System
         /// <param name="dictionary"><see cref="IDictionary{TKey, TValue}"/>类的实例扩展。</param>
         /// <param name="key">在字典中存在的键。</param>
         /// <returns>若字典中的键存在，则返回指定字典值的指定类型，否则返回指定类型的默认值。</returns>
-        public static TValue GetOrDefault<TKey, TValue>(this IDictionary<TKey, object> dictionary, TKey key) => dictionary.GetOrDefault(key, default(TValue));
-        /// <summary>
-        /// 获取与 System.Collections.Specialized.NameValueCollection 中的指定键关联的值，当集合中不存在指定名称的对象时，返回默认类型的默认值。
-        /// </summary>
-        /// <typeparam name="T">默认值的类型。</typeparam>
-        /// <param name="collection">被扩展的实例。</param>
-        /// <param name="name">项的 System.String 键，该项包含要获取的值。键可以是 null。</param>
-        /// <param name="defaultValue">当项中不存在时设置的默认值。</param>
-        /// <returns>默认值或值。</returns>
-        public static T GetOrDefault<T>(this NameValueCollection collection, string name, T defaultValue) => collection.Get(name).To<T>(defaultValue);
-        /// <summary>
-        /// 获取与 System.Collections.Specialized.NameValueCollection 中的指定键关联的值，当集合中不存在指定名称的对象时，返回默认类型的默认值。
-        /// </summary>
-        /// <typeparam name="T">默认值的类型。</typeparam>
-        /// <param name="collection">被扩展的实例。</param>
-        /// <param name="name">项的 System.String 键，该项包含要获取的值。键可以是 null。</param>
-        /// <returns>默认值或值。</returns>
-        public static T GetOrDefault<T>(this NameValueCollection collection, string name) => GetOrDefault(collection, name, default(T));
+        public static TValue GetOrDefault<TKey, TValue>(this IDictionary<TKey, object> dictionary, TKey key) => dictionary.GetOrDefault(key, default(TValue));        
         #endregion
 
         #region ForEach

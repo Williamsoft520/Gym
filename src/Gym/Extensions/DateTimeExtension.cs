@@ -8,8 +8,6 @@ namespace System
     /// </summary>
     public static class DateTimeExtension
     {
-
-
         #region DayOfWeekChineseString
         /// <summary>
         /// 获取当前时间对象所表示的日期是星期几的中文字符串。
@@ -90,30 +88,5 @@ namespace System
                     new DateTime(currentYear, currentMonth + 1, 1).AddSeconds(-1).Day, 23, 59, 59
                     );
         }
-
-        /// <summary>
-        /// 返回当前时间实例在一年中的日期的那个星期。
-        /// </summary>
-        /// <param name="datetime">当前时间的扩展实例。</param>
-        /// <param name="firstDayOfWeek">表示一周的第一天的枚举值。</param>
-        /// <param name="type">指示要创建的日历的语言版本。</param>
-        /// <returns>一个正整数，表示一年中包括 time 参数中的日期的那个星期。</returns>
-        public static int GetWeekOfYear(this DateTime datetime, DayOfWeek firstDayOfWeek = DayOfWeek.Monday, GregorianCalendarTypes type= GregorianCalendarTypes.Localized)
-        {
-            var calendar = new GregorianCalendar(type);
-            return calendar.GetWeekOfYear(datetime, CalendarWeekRule.FirstDay, firstDayOfWeek);
-        }
-        /// <summary>
-        /// 返回当前时间实例的年份的天数。
-        /// </summary>
-        /// <param name="datetime">当前时间的扩展实例。</param>
-        /// <param name="type">指示要创建的日历的语言版本。</param>
-        /// <returns>指定年份的天数。</returns>
-        public static int GetDaysInYear(this DateTime datetime, GregorianCalendarTypes type = GregorianCalendarTypes.Localized)
-        {
-            var calendar = new GregorianCalendar(type);
-            return calendar.GetDaysInYear(datetime.Year, calendar.GetEra(datetime));
-        }
-        
     }
 }

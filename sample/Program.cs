@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Security;
-using System.Net;
-using System.ComponentModel;
 
 namespace Gym.Sample
 {
@@ -66,8 +63,6 @@ namespace Gym.Sample
             Console.WriteLine(now.DayOfWeekChineseString());
             Console.WriteLine(now.GetFirstInMonth());
             Console.WriteLine(now.GetLastInMonth());
-            Console.WriteLine(now.GetWeekOfYear());
-            Console.WriteLine(now.GetDaysInYear());
             Console.WriteLine(now.ToChineseDateString());
             Console.WriteLine(now.ToChineseDateTimeString());
             #endregion
@@ -78,18 +73,17 @@ namespace Gym.Sample
             Console.WriteLine(typeof(TestEnum).GetEnumItems().Select((k,v)=>$"{k.Key}:{k.Value}").Join("|"));
             #endregion
 
-            #region 加密 System.Security
-            Console.WriteLine("administrator".CryptoForMD5());
-            Console.WriteLine("admin".CryptoForSHA1());
-            Console.WriteLine("admin".CryptoForSHA256());
+            #region Substring
+            Console.WriteLine("abcdefg".Substring(0,"..."));
+            Console.WriteLine("abcdefghijklmn".Substring(0,10,"..."));
+            Console.WriteLine("abcdefghijklmn".Substring(0, 30, "..."));
             #endregion
-            
         }
     }
 
     enum TestEnum
     {
-        [Description("枚举1")]
+        [Description("这个是枚举 Test 1")]
         Test1=1,
         Test2=2,
         Test3=3

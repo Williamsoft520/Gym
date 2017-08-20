@@ -8,7 +8,6 @@ namespace System
     /// </summary>
     public static class LinqExtension
     {
-        #region Paged 这个要等 core 2.0
         /// <summary> 
         /// 对当前已排序的结果进行分页。
         /// </summary>
@@ -37,6 +36,5 @@ namespace System
             var pagedList = list.Skip((page - 1) * itemPerPage).Take(itemPerPage);
             return new PagedCollection<T>(pagedList.AsEnumerable(), list.Count()) { CurrentPage = page, ItemsPerPage = itemPerPage };
         }
-        #endregion
     }
 }
