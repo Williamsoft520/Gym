@@ -1,5 +1,6 @@
 ## Gym
 easy use,easy stronger. easy extend. One step install and enjoy  all. It just exntensions for developer instead of using static class or tools in so called 'Utility'. No other thirdparty dependencies or assemblies. 
+
 简单应用，易于扩展，一键安装，享受全部。用扩展的方式替代了曾经的静态方法或工具类，无任何第三方的额外依赖程序集。
 
 ## Install Package from Nuget（使用 Nuget 安装）
@@ -33,12 +34,12 @@ easy use,easy stronger. easy extend. One step install and enjoy  all. It just ex
     //extend ForEach for IEnumerable<T>
     new[]{ 1,2,3,4,5,6,7}.ForEach(item => Console.WriteLine(item));
     
-### For more help please see [Wiki](wiki)
-### 点击 [Wiki](wiki) 查看文档
+### For more API please see [Wiki](https://github.com/Williamsoft520/Gym/wiki)
+### 点击 [Wiki](https://github.com/Williamsoft520/Gym/wiki) 查看更多 API
 
 ## Latest Version v1.0（最新版本v1.0）
->Support Framework4.5+, Core1.0+, Standard 1.0+
+* Support Framework4.5+, Core1.0+, Standard 1.0+
 
->支持 Framework4.5+, Core1.0+, Standard 1.0+
+* 支持 Framework4.5+, Core1.0+, Standard 1.0+
 
 
